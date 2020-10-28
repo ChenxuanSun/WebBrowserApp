@@ -34,7 +34,6 @@ public class PageViewerFragment extends Fragment {
     public interface updateURL{
         //用来改全网址
         void SetURL(String url);
-
     }
 
     public static PageViewerFragment newInstance(String param1, String param2) {
@@ -82,13 +81,11 @@ public class PageViewerFragment extends Fragment {
         }
     };
 
-
-
     public  void sppp(String url){
+        webView.loadUrl(url);
         if(url.contains("http")) {
             webView.loadUrl(url);
             webView.getSettings().setJavaScriptEnabled(true);//可以和javaScript交互
-
 
         }else if (url.contains(".com")){
             webView.loadUrl("http://"+url);
@@ -108,7 +105,6 @@ public class PageViewerFragment extends Fragment {
     public  void goforwardView(){
         webView.goForward();
     }
-
 
 
 }

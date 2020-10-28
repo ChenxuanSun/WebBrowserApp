@@ -71,10 +71,10 @@ public class PageControlFragment extends Fragment {
         GoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Thread t = new Thread();
+               Thread t = new Thread();
                 String URLText =  editText.getText().toString();
                 ParentActivity.PutURLinWebView(URLText);
-                t.start();
+                 t.start();
             }
 
         });
@@ -107,16 +107,6 @@ public void updateURL(String url){
 
     public String getURL(){
         String sTmp=editText.getText().toString();
-        if (sTmp.length()==0){
-            sTmp="";
-        }
-        else if (sTmp.length()<8){
-            sTmp="https://"+sTmp;
-        }
-        else if (!sTmp.substring(0,8).toLowerCase().equals("https://")){
-            sTmp="https://"+sTmp;
-        }
-        editText.setText(sTmp);
         return sTmp;
     }
 
