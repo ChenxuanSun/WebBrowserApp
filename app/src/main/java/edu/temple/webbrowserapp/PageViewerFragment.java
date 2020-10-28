@@ -37,8 +37,6 @@ public class PageViewerFragment extends Fragment {
 
     }
 
-
-
     public static PageViewerFragment newInstance(String param1, String param2) {
         PageViewerFragment fragment = new PageViewerFragment();
         Bundle args = new Bundle();
@@ -48,17 +46,18 @@ public class PageViewerFragment extends Fragment {
         return fragment;
     }
 
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
 
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
 
-    @Override
-    public void onSaveInstanceState(@NonNull Bundle outState) {
-        super.onSaveInstanceState(outState);
-    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -89,16 +88,16 @@ public class PageViewerFragment extends Fragment {
         if(url.contains("http")) {
             webView.loadUrl(url);
             webView.getSettings().setJavaScriptEnabled(true);//可以和javaScript交互
-            webView.setWebViewClient(new WebViewClient());
+
 
         }else if (url.contains(".com")){
             webView.loadUrl("http://"+url);
             webView.getSettings().setJavaScriptEnabled(true);//可以和javaScript交互
-            webView.setWebViewClient(new WebViewClient());
+
         }else{
             webView.loadUrl("http://"+url+".com/");
             webView.getSettings().setJavaScriptEnabled(true);//可以和javaScript交互
-            webView.setWebViewClient(new WebViewClient());
+
         }
     }
 

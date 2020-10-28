@@ -3,6 +3,7 @@ package edu.temple.webbrowserapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -32,13 +33,12 @@ public class BrowserActivity extends AppCompatActivity implements PageControlFra
 
 
 
-
     @Override
 
     public void PutURLinWebView(String URL) {
         pageViewerFragment.sppp(URL);
         pageControlFragment.getURL();
-      
+
     }
 
     public void GobackWeb(){
