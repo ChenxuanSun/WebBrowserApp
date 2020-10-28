@@ -25,7 +25,7 @@ public class PageViewerFragment extends Fragment {
     public PageViewerFragment() {
 
     }
-
+      
     private PageViewerFragment.updateURL listener;
 
     public void addPageListener(PageViewerFragment.updateURL listener){
