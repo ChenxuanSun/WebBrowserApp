@@ -23,7 +23,7 @@ public class BrowserActivity extends AppCompatActivity
     private PageListFragment frPageList;
     private PagerFragment frPager;
     private int igCurPagerID;
-
+    
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
