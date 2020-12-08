@@ -30,11 +30,11 @@ public class PageViewerFragment extends Fragment {
         void OnPageChangeURL(String sURL);
         void OnPageFinish(String sTitle);
     }
-
+    
     public PageViewerFragment() {
         // Required empty public constructor
     }
-      
+
     public static PageViewerFragment newInstance() {
         return new PageViewerFragment();
     }
